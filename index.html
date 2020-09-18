@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Code Quiz</title>
+    <!--css-->
+    <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -15,16 +17,88 @@
 <body>
     <!--Navbar-->
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">View Highscores</a>
-        <h4>Time: </h4>
+        <a id="highscoreBtn" class="navbar-brand" onclick="openHighscore()" href="#">View Highscores</a>
+        <p>Time: <span id="timer">60</span></p>
     </nav>
-    <!--Quiz-->
-    <main class="container">
-        <!--Row 1-->
-        <div class="row">
 
+    <!--Welcome Page-->
+    <section id="welcome-page" class="container text-center">
+        <!--Title Row-->
+        <div class="row">
+            <div class="col-12">
+                <h1>Code Quiz</h1>
+            </div>
+        </div>
+        <!--Text Row-->
+        <div class="row">
+            <div class="col-12">
+                <p>Welcome to Code Quiz!<br />Press start to begin</p>
+            </div>
+        </div>
+        <!--Start Button Row-->
+        <div class="row">
+            <div class="col-12">
+                <button id="startBtn" type="button" class="btn btn-primary">Start</button>
+            </div>
+        </div>
+        <hr />
+        <!--Info Row-->
+        <div class="row">
+            <div class="col-12 grey-text-sm">
+                <p>You will be given <strong>one</strong></strong> minute to answer as many questions as you can.<br />
+                    Each question is multiple choice on the subject of <strong>Javascript</strong> fundamentals.<br />
+                    For each incorrect answer <strong>five</strong> seconds will be <strong>deducted.</strong><br />
+                    Good luck!</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Quiz Page-->
+    <main id="quiz-page" style="display: none;" class="container text-center">
+        <!--Question Row-->
+        <div class="row">
+            <div class="col-12">
+                <p class="grey-text-sm">Question #: </p>
+                <h2 id="question"></h2>
+                <p class="grey-text-sm">Select one of the follow:</p>
+            </div>
+        </div>
+        <!--Answers Row-->
+        <div class="row">
+            <!--Column 1-->
+            <div class="col-12 ">
+                <!--Sub Row 1-->
+                <div class="row">
+                    <div class="col-6 text-right">
+                        <button id="option1" type="button" class="btn btn-primary">Option1</button>
+                    </div>
+                    <div class="col-6 text-left">
+                        <button id="option2" type="button" class="btn btn-primary">Option2</button>
+                    </div>
+                </div>
+                <!--Sub Row 2-->
+                <div class="row">
+                    <div class="col-6 text-right">
+                        <button id="option3" type="button" class="btn btn-primary">Option3</button>
+                    </div>
+                    <div class="col-6 text-left">
+                        <button id="option4" type="button" class="btn btn-primary">Option4</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+
+        <!--Info Row-->
+        <div class="row">
+            <div class="col-12 grey-text-sm">
+            </div>
         </div>
     </main>
+
+    <section id="highscore-page" style="display: none;" class="container text-center">
+
+    </section>
 
     <script src="./assets/script.js"></script>
 </body>
