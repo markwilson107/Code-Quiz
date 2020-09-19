@@ -58,7 +58,7 @@
         <!--Question Row-->
         <div class="row">
             <div class="col-12">
-                <p class="grey-text-sm">Question #: </p>
+                <p class="grey-text-sm">Question #<span id="questionCounter">1</span></p>
                 <h2 id="question"></h2>
                 <p class="grey-text-sm">Select one of the follow:</p>
             </div>
@@ -96,8 +96,48 @@
         </div>
     </main>
 
-    <section id="highscore-page" style="display: none;" class="container text-center">
+    <section id="quiz-end" style="display: none;" class="container text-center">
+        <!--Title Row-->
+        <div class="row">
+            <div class="col-12">
+                <h2>Quiz finished!</h2>
+            </div>
+        </div>
+        <!--Text Row-->
+        <div class="row">
+            <div class="col-12">
+                <p>Score: <span id="score"></span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                Name: <input id="score-name" /> <br /><br />
+                <button id="save-score" type="button" class="btn btn-primary">Save Score</button>
+            </div>
+        </div>
+    </section>
 
+    <section id="highscore-page" style="display: none;" class="container text-center">
+        <!--Title Row-->
+        <div class="row">
+            <div class="col-12">
+                <h1>Highscores</h1>
+            </div>
+        </div>
+        <!--Highscores Row-->
+        <div class="row">
+            <div class="col-12">
+                <ol id="highscore-list">
+                </ol>
+            </div>
+        </div>
+        <!--Play Again Row-->
+        <div class="row">
+            <div class="col-12">
+                <button id="play-again" type="button" class="btn btn-primary" onClick="window.location.reload();">Play
+                    Again</button>
+            </div>
+        </div>
     </section>
 
     <script src="./assets/script.js"></script>
