@@ -6,4 +6,4 @@ Highscore are stored in local storage and displayed when the user opens the high
 
 Deployed application: https://markwilson107.github.io/Code-Quiz/
 
-![Image of Yaktocat](https://github.com/markwilson107/code-quiz//blob/master/assets/Deployed-Application.png)
+![Image of Yaktocat](https://github.com/markwilson107/Code-Quiz/blob/master/assets/Deployed-Application.png)
